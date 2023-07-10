@@ -1,0 +1,149 @@
+.pricing1 {
+    width: 100%;
+    padding: 6rem 1rem;
+    background: #fff;
+}
+
+.phara {
+    color: black;
+}
+
+.card-container1 {
+    max-width: 1140px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px;
+}
+
+.card1 {
+    position: relative;
+    border: 1px solid #eee;
+    color: rgb(50, 47, 47);
+    text-align: center;
+    padding: 1rem;
+    border-radius: 15px;
+    box-shadow: 0px 0px 5px 2px rgba(118, 120, 119, 0.5);
+    overflow: hidden;
+}
+
+.card1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    opacity: 0;
+    /* Set initial opacity to 1 */
+    transition: opacity 0.3s ease;
+    z-index: 2;
+}
+
+.card1:hover::before {
+    opacity: 1;
+    /* Set opacity to 0 on hover */
+}
+
+.card1:hover h3,
+.card1:hover p {
+    opacity: 1;
+    /* Set opacity to 1 on hover */
+}
+
+.card1 h3,
+.card1 p {
+    position: relative;
+    z-index: 3;
+    opacity: 0;
+    /* Hide the content initially */
+}
+
+.link-icon {
+    opacity: 0;
+    position: relative;
+    z-index: 3;
+    transition: opacity 0.3s;
+}
+
+.card1:hover .link-icon {
+    opacity: 1;
+}
+
+.card1:nth-child(1) {
+    background-image: url(./10.png);
+    background-size: 100% 100%;
+}
+
+.card1:nth-child(2) {
+    background-image: url(./11.JPG);
+    background-size: 100% 100%;
+}
+
+.card1:nth-child(3) {
+    background-image: url(./12.JPG);
+    background-size: 100% 100%;
+}
+
+.card1:nth-child(4) {
+    background-image: url(./13.JPG);
+    background-size: 100% 100%;
+}
+
+.card1:nth-child(5) {
+    background-image: url(./16.JPG);
+    background-size: 100% 100%;
+}
+
+.bar {
+    border-bottom: 1px solid rgb(50, 47, 47);
+    width: 10%;
+    margin: 1.5rem auto;
+    display: block;
+}
+
+.modal {
+    display: block;
+    position: fixed;
+    z-index: 6;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #0f0f0f;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 740px) {
+    .card-container1 {
+        max-width: 90%;
+        margin: auto;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
